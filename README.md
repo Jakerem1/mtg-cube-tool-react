@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# MTG Cube Manager React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React web app for managing Magic The Gathering decks and cubes.  
+You can add decks from text files, select which decks to include, rename or remove decks, and download your cube as JSON.  
 
-## Available Scripts
+## Live Demo
 
-In the project directory, you can run:
+Access the deployed app here:  
+https://Jakerem1.github.io/mtg-cube-tool-react/
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How to run locally
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repo:  
+   ```bash
+   git clone https://github.com/Jakerem1/mtg-cube-tool-react.git
+   cd mtg-cube-tool-react
+   ```
 
-### `npm test`
+2. Install dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. Start the development server:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   npm start
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Open your browser and go to `http://localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## How to deploy to GitHub Pages
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Make sure `homepage` is set correctly in `package.json`:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```json
+   "homepage": "https://Jakerem1.github.io/mtg-cube-tool-react"
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Make sure these scripts exist in `package.json`:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```json
+   "scripts": {
+     "predeploy": "npm run build",
+     "deploy": "gh-pages -d build",
+     // other scripts...
+   }
+   ```
 
-## Learn More
+3. Install `gh-pages` package if not installed:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm install --save-dev gh-pages
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Deploy the app:
 
-### Code Splitting
+   ```bash
+   npm run deploy
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5. Enable GitHub Pages in your repo settings to use the `gh-pages` branch as the source.
 
-### Analyzing the Bundle Size
+6. Visit your live app at:
+   `https://Jakerem1.github.io/mtg-cube-tool-react/`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+MIT License
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Enjoy managing your MTG decks and cubes!
